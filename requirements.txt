@@ -1,0 +1,7 @@
+pandas>=2.2
+pyarrow==22.0.0
+numpy>=1.26
+lightgbm==4.7.0
+scikit-learn>=1.5
+matplotlib>=3.8
+torch>=2.3          # only for the GNN comparison (src/gnn.py)

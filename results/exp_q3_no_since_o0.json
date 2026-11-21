@@ -1,0 +1,153 @@
+{
+ "mode": "dev",
+ "groups": [
+  "T",
+  "R"
+ ],
+ "weeks": 5,
+ "gap_days": 0.0,
+ "recency": 1.0,
+ "mask_gaps": false,
+ "n_features": 107,
+ "drop": [
+  "R_nb_",
+  "R_repo_share_",
+  "T_days_since",
+  "T_mean_gap"
+ ],
+ "params": {
+  "objective": "binary",
+  "learning_rate": 0.03,
+  "num_leaves": 7,
+  "min_child_samples": 80,
+  "feature_fraction": 0.7,
+  "bagging_fraction": 0.8,
+  "bagging_freq": 1,
+  "lambda_l2": 1.0,
+  "n_estimators": 150,
+  "verbose": -1,
+  "random_state": 2026,
+  "deterministic": true,
+  "force_col_wise": true,
+  "n_jobs": 4
+ },
+ "thr_mode": "prob",
+ "push_rule": "model",
+ "valid_offset": 0,
+ "thresholds": {
+  "open_pr": 0.1769,
+  "open_issue": 0.3069,
+  "issue_comment": 0.2079,
+  "pr_review": 0.2306,
+  "pr_review_comment": 0.1963,
+  "push": 0.3309
+ },
+ "ratios": {
+  "open_pr": 0.903,
+  "open_issue": 0.693,
+  "issue_comment": 0.765,
+  "pr_review": 0.75,
+  "pr_review_comment": 0.642,
+  "push": 0.565
+ },
+ "snapshots": [
+  {
+   "cutoff": "2026-11-06 16:00:00",
+   "label_start": "2026-11-06 16:00:00",
+   "rows": 4108,
+   "pos_rate": {
+    "open_pr": 0.084,
+    "open_issue": 0.0455,
+    "issue_comment": 0.0497,
+    "pr_review": 0.0533,
+    "pr_review_comment": 0.0156,
+    "push": 0.0385
+   }
+  },
+  {
+   "cutoff": "2026-10-30 16:00:00",
+   "label_start": "2026-10-30 16:00:00",
+   "rows": 4040,
+   "pos_rate": {
+    "open_pr": 0.0881,
+    "open_issue": 0.0485,
+    "issue_comment": 0.0624,
+    "pr_review": 0.0658,
+    "pr_review_comment": 0.0265,
+    "push": 0.0653
+   }
+  },
+  {
+   "cutoff": "2026-10-23 16:00:00",
+   "label_start": "2026-10-23 16:00:00",
+   "rows": 3876,
+   "pos_rate": {
+    "open_pr": 0.0774,
+    "open_issue": 0.0454,
+    "issue_comment": 0.0516,
+    "pr_review": 0.0586,
+    "pr_review_comment": 0.0175,
+    "push": 0.2479
+   }
+  },
+  {
+   "cutoff": "2026-10-16 16:00:00",
+   "label_start": "2026-10-16 16:00:00",
+   "rows": 3556,
+   "pos_rate": {
+    "open_pr": 0.0906,
+    "open_issue": 0.0644,
+    "issue_comment": 0.056,
+    "pr_review": 0.0602,
+    "pr_review_comment": 0.0495,
+    "push": 0.4272
+   }
+  },
+  {
+   "cutoff": "2026-10-09 16:00:00",
+   "label_start": "2026-10-09 16:00:00",
+   "rows": 2918,
+   "pos_rate": {
+    "open_pr": 0.1117,
+    "open_issue": 0.0696,
+    "issue_comment": 0.0764,
+    "pr_review": 0.0836,
+    "pr_review_comment": 0.0579,
+    "push": 0.5641
+   }
+  }
+ ],
+ "inner_f1": {
+  "open_pr": 0.438,
+  "open_issue": 0.4802,
+  "issue_comment": 0.4289,
+  "pr_review": 0.4196,
+  "pr_review_comment": 0.3942,
+  "push": 0.2881
+ },
+ "valid": {
+  "per_act": {
+   "open_pr": 0.4441340782122905,
+   "open_issue": 0.4817073170731707,
+   "issue_comment": 0.44324324324324327,
+   "pr_review": 0.3937007874015748,
+   "pr_review_comment": 0.3484848484848485,
+   "push": 0.15517241379310345
+  },
+  "macro_f1": 0.37774044803470525,
+  "micro_f1": 0.37975742367210374,
+  "score": 0.3787489358534045
+ },
+ "valid_without_push": {
+  "per_act": {
+   "open_pr": 0.4441340782122905,
+   "open_issue": 0.4817073170731707,
+   "issue_comment": 0.44324324324324327,
+   "pr_review": 0.3937007874015748,
+   "pr_review_comment": 0.3484848484848485
+  },
+  "macro_f1": 0.42225405488302553,
+  "micro_f1": 0.4338349766476388,
+  "score": 0.4280445157653322
+ }
+}

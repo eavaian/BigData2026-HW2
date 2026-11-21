@@ -1,0 +1,31 @@
+digraph schema {
+  rankdir=LR; node [shape=plaintext, fontname=Helvetica];
+  Users [label=<<table border="1" cellborder="0"><tr><td bgcolor="#dbe7fb"><b>Users</b></td></tr><tr><td align="left"><b>PK</b> user_id</td></tr></table>>];
+  Repositories [label=<<table border="1" cellborder="0"><tr><td bgcolor="#dbe7fb"><b>Repositories</b></td></tr><tr><td align="left"><b>PK</b> repo_id</td></tr></table>>];
+  PullRequests [label=<<table border="1" cellborder="0"><tr><td bgcolor="#dbe7fb"><b>PullRequests</b></td></tr><tr><td align="left"><b>PK</b> pr_id</td></tr><tr><td align="left" port="repo_id">FK repo_id</td></tr><tr><td align="left" port="author_id">FK author_id</td></tr><tr><td align="left" port="merged_by_id">FK merged_by_id</td></tr></table>>];
+  Issues [label=<<table border="1" cellborder="0"><tr><td bgcolor="#dbe7fb"><b>Issues</b></td></tr><tr><td align="left"><b>PK</b> issue_id</td></tr><tr><td align="left" port="repo_id">FK repo_id</td></tr><tr><td align="left" port="author_id">FK author_id</td></tr><tr><td align="left" port="pull_request_id">FK pull_request_id</td></tr><tr><td align="left" port="assignee_id">FK assignee_id</td></tr></table>>];
+  IssueComments [label=<<table border="1" cellborder="0"><tr><td bgcolor="#dbe7fb"><b>IssueComments</b></td></tr><tr><td align="left"><b>PK</b> comment_id</td></tr><tr><td align="left" port="issue_id">FK issue_id</td></tr><tr><td align="left" port="repo_id">FK repo_id</td></tr><tr><td align="left" port="author_id">FK author_id</td></tr></table>>];
+  PRReviews [label=<<table border="1" cellborder="0"><tr><td bgcolor="#dbe7fb"><b>PRReviews</b></td></tr><tr><td align="left"><b>PK</b> review_id</td></tr><tr><td align="left" port="pr_id">FK pr_id</td></tr><tr><td align="left" port="repo_id">FK repo_id</td></tr><tr><td align="left" port="reviewer_id">FK reviewer_id</td></tr></table>>];
+  PRReviewComments [label=<<table border="1" cellborder="0"><tr><td bgcolor="#dbe7fb"><b>PRReviewComments</b></td></tr><tr><td align="left"><b>PK</b> comment_id</td></tr><tr><td align="left" port="pr_id">FK pr_id</td></tr><tr><td align="left" port="repo_id">FK repo_id</td></tr><tr><td align="left" port="author_id">FK author_id</td></tr><tr><td align="left" port="pull_request_review_id">FK pull_request_review_id</td></tr><tr><td align="left" port="in_reply_to_id">FK in_reply_to_id</td></tr></table>>];
+  Pushes [label=<<table border="1" cellborder="0"><tr><td bgcolor="#dbe7fb"><b>Pushes</b></td></tr><tr><td align="left"><b>PK</b> push_id</td></tr><tr><td align="left" port="user_id">FK user_id</td></tr><tr><td align="left" port="repo_id">FK repo_id</td></tr></table>>];
+  PullRequests:repo_id -> Repositories [label="repo_id", fontsize=9];
+  PullRequests:author_id -> Users [label="author_id", fontsize=9];
+  PullRequests:merged_by_id -> Users [label="merged_by_id", fontsize=9];
+  Issues:repo_id -> Repositories [label="repo_id", fontsize=9];
+  Issues:author_id -> Users [label="author_id", fontsize=9];
+  Issues:pull_request_id -> PullRequests [label="pull_request_id", fontsize=9];
+  Issues:assignee_id -> Users [label="assignee_id", fontsize=9];
+  IssueComments:issue_id -> Issues [label="issue_id", fontsize=9];
+  IssueComments:repo_id -> Repositories [label="repo_id", fontsize=9];
+  IssueComments:author_id -> Users [label="author_id", fontsize=9];
+  PRReviews:pr_id -> PullRequests [label="pr_id", fontsize=9];
+  PRReviews:repo_id -> Repositories [label="repo_id", fontsize=9];
+  PRReviews:reviewer_id -> Users [label="reviewer_id", fontsize=9];
+  PRReviewComments:pr_id -> PullRequests [label="pr_id", fontsize=9];
+  PRReviewComments:repo_id -> Repositories [label="repo_id", fontsize=9];
+  PRReviewComments:author_id -> Users [label="author_id", fontsize=9];
+  PRReviewComments:pull_request_review_id -> PRReviews [label="pull_request_review_id", fontsize=9];
+  PRReviewComments:in_reply_to_id -> PRReviewComments [label="in_reply_to_id", fontsize=9];
+  Pushes:user_id -> Users [label="user_id", fontsize=9];
+  Pushes:repo_id -> Repositories [label="repo_id", fontsize=9];
+}

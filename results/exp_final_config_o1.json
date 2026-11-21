@@ -1,0 +1,138 @@
+{
+ "mode": "dev",
+ "groups": [
+  "T",
+  "R"
+ ],
+ "weeks": 4,
+ "gap_days": 0.0,
+ "recency": 1.0,
+ "mask_gaps": false,
+ "n_features": 116,
+ "drop": [
+  "R_nb_",
+  "R_repo_share_"
+ ],
+ "params": {
+  "objective": "binary",
+  "learning_rate": 0.03,
+  "num_leaves": 7,
+  "min_child_samples": 80,
+  "feature_fraction": 0.7,
+  "bagging_fraction": 0.8,
+  "bagging_freq": 1,
+  "lambda_l2": 1.0,
+  "n_estimators": 150,
+  "verbose": -1,
+  "random_state": 2026,
+  "deterministic": true,
+  "force_col_wise": true,
+  "n_jobs": 4
+ },
+ "thr_mode": "prob",
+ "push_rule": "model",
+ "valid_offset": 1,
+ "thresholds": {
+  "open_pr": 0.1601,
+  "open_issue": 0.15,
+  "issue_comment": 0.1358,
+  "pr_review": 0.1585,
+  "pr_review_comment": 0.0897,
+  "push": 0.5886
+ },
+ "ratios": {
+  "open_pr": 0.878,
+  "open_issue": 1.844,
+  "issue_comment": 1.365,
+  "pr_review": 1.104,
+  "pr_review_comment": 1.75,
+  "push": 0.258
+ },
+ "snapshots": [
+  {
+   "cutoff": "2026-10-30 16:00:00",
+   "label_start": "2026-10-30 16:00:00",
+   "rows": 4040,
+   "pos_rate": {
+    "open_pr": 0.0881,
+    "open_issue": 0.0485,
+    "issue_comment": 0.0624,
+    "pr_review": 0.0658,
+    "pr_review_comment": 0.0265,
+    "push": 0.0653
+   }
+  },
+  {
+   "cutoff": "2026-10-23 16:00:00",
+   "label_start": "2026-10-23 16:00:00",
+   "rows": 3876,
+   "pos_rate": {
+    "open_pr": 0.0774,
+    "open_issue": 0.0454,
+    "issue_comment": 0.0516,
+    "pr_review": 0.0586,
+    "pr_review_comment": 0.0175,
+    "push": 0.2479
+   }
+  },
+  {
+   "cutoff": "2026-10-16 16:00:00",
+   "label_start": "2026-10-16 16:00:00",
+   "rows": 3556,
+   "pos_rate": {
+    "open_pr": 0.0906,
+    "open_issue": 0.0644,
+    "issue_comment": 0.056,
+    "pr_review": 0.0602,
+    "pr_review_comment": 0.0495,
+    "push": 0.4272
+   }
+  },
+  {
+   "cutoff": "2026-10-09 16:00:00",
+   "label_start": "2026-10-09 16:00:00",
+   "rows": 2918,
+   "pos_rate": {
+    "open_pr": 0.1117,
+    "open_issue": 0.0696,
+    "issue_comment": 0.0764,
+    "pr_review": 0.0836,
+    "pr_review_comment": 0.0579,
+    "push": 0.5641
+   }
+  }
+ ],
+ "inner_f1": {
+  "open_pr": 0.427,
+  "open_issue": 0.4762,
+  "issue_comment": 0.4407,
+  "pr_review": 0.4592,
+  "pr_review_comment": 0.2832,
+  "push": 0.3596
+ },
+ "valid": {
+  "per_act": {
+   "open_pr": 0.43037974683544306,
+   "open_issue": 0.41454545454545455,
+   "issue_comment": 0.37800687285223367,
+   "pr_review": 0.4014732965009208,
+   "pr_review_comment": 0.3025830258302583,
+   "push": 0.24242424242424243
+  },
+  "macro_f1": 0.36156877316475877,
+  "micro_f1": 0.3855746545331985,
+  "score": 0.37357171384897864
+ },
+ "valid_without_push": {
+  "per_act": {
+   "open_pr": 0.43037974683544306,
+   "open_issue": 0.41454545454545455,
+   "issue_comment": 0.37800687285223367,
+   "pr_review": 0.4014732965009208,
+   "pr_review_comment": 0.3025830258302583
+  },
+  "macro_f1": 0.38539767931286206,
+  "micro_f1": 0.39766081871345027,
+  "score": 0.39152924901315617
+ }
+}

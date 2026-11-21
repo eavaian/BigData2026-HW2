@@ -1,0 +1,125 @@
+{
+ "mode": "dev",
+ "groups": [
+  "T",
+  "R"
+ ],
+ "weeks": 3,
+ "gap_days": 0.0,
+ "recency": 1.0,
+ "mask_gaps": false,
+ "n_features": 116,
+ "drop": [
+  "R_nb_",
+  "R_repo_share_"
+ ],
+ "params": {
+  "objective": "binary",
+  "learning_rate": 0.03,
+  "num_leaves": 7,
+  "min_child_samples": 80,
+  "feature_fraction": 0.7,
+  "bagging_fraction": 0.8,
+  "bagging_freq": 1,
+  "lambda_l2": 1.0,
+  "n_estimators": 150,
+  "verbose": -1,
+  "random_state": 2026,
+  "deterministic": true,
+  "force_col_wise": true,
+  "n_jobs": 4
+ },
+ "thr_mode": "rate",
+ "push_rule": "model",
+ "valid_offset": 2,
+ "thresholds": {
+  "open_pr": 0.1691,
+  "open_issue": 0.3286,
+  "issue_comment": 0.2284,
+  "pr_review": 0.1933,
+  "pr_review_comment": 0.2108,
+  "push": 0.4798
+ },
+ "ratios": {
+  "open_pr": 1.003,
+  "open_issue": 0.876,
+  "issue_comment": 0.898,
+  "pr_review": 1.188,
+  "pr_review_comment": 0.839,
+  "push": 0.772
+ },
+ "snapshots": [
+  {
+   "cutoff": "2026-10-23 16:00:00",
+   "label_start": "2026-10-23 16:00:00",
+   "rows": 3876,
+   "pos_rate": {
+    "open_pr": 0.0774,
+    "open_issue": 0.0454,
+    "issue_comment": 0.0516,
+    "pr_review": 0.0586,
+    "pr_review_comment": 0.0175,
+    "push": 0.2479
+   }
+  },
+  {
+   "cutoff": "2026-10-16 16:00:00",
+   "label_start": "2026-10-16 16:00:00",
+   "rows": 3556,
+   "pos_rate": {
+    "open_pr": 0.0906,
+    "open_issue": 0.0644,
+    "issue_comment": 0.056,
+    "pr_review": 0.0602,
+    "pr_review_comment": 0.0495,
+    "push": 0.4272
+   }
+  },
+  {
+   "cutoff": "2026-10-09 16:00:00",
+   "label_start": "2026-10-09 16:00:00",
+   "rows": 2918,
+   "pos_rate": {
+    "open_pr": 0.1117,
+    "open_issue": 0.0696,
+    "issue_comment": 0.0764,
+    "pr_review": 0.0836,
+    "pr_review_comment": 0.0579,
+    "push": 0.5641
+   }
+  }
+ ],
+ "inner_f1": {
+  "open_pr": 0.4455,
+  "open_issue": 0.4567,
+  "issue_comment": 0.3878,
+  "pr_review": 0.3863,
+  "pr_review_comment": 0.2906,
+  "push": 0.5335
+ },
+ "valid": {
+  "per_act": {
+   "open_pr": 0.41751824817518246,
+   "open_issue": 0.43103448275862066,
+   "issue_comment": 0.42696629213483145,
+   "pr_review": 0.4489051094890511,
+   "pr_review_comment": 0.2289156626506024,
+   "push": 0.2911392405063291
+  },
+  "macro_f1": 0.37407983928576954,
+  "micro_f1": 0.37355973317161917,
+  "score": 0.3738197862286944
+ },
+ "valid_without_push": {
+  "per_act": {
+   "open_pr": 0.41751824817518246,
+   "open_issue": 0.43103448275862066,
+   "issue_comment": 0.42696629213483145,
+   "pr_review": 0.4489051094890511,
+   "pr_review_comment": 0.2289156626506024
+  },
+  "macro_f1": 0.39066795904165763,
+  "micro_f1": 0.41514598540145986,
+  "score": 0.40290697222155875
+ }
+}

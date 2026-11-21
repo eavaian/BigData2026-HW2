@@ -1,0 +1,112 @@
+{
+ "mode": "dev",
+ "groups": [
+  "T",
+  "R"
+ ],
+ "weeks": 2,
+ "gap_days": 0.0,
+ "recency": 1.0,
+ "mask_gaps": false,
+ "n_features": 116,
+ "drop": [
+  "R_nb_",
+  "R_repo_share_"
+ ],
+ "params": {
+  "objective": "binary",
+  "learning_rate": 0.03,
+  "num_leaves": 7,
+  "min_child_samples": 80,
+  "feature_fraction": 0.7,
+  "bagging_fraction": 0.8,
+  "bagging_freq": 1,
+  "lambda_l2": 1.0,
+  "n_estimators": 150,
+  "verbose": -1,
+  "random_state": 2026,
+  "deterministic": true,
+  "force_col_wise": true,
+  "n_jobs": 4
+ },
+ "thr_mode": "prob",
+ "push_rule": "model",
+ "valid_offset": 0,
+ "thresholds": {
+  "open_pr": 0.2026,
+  "open_issue": 0.2809,
+  "issue_comment": 0.2464,
+  "pr_review": 0.4085,
+  "pr_review_comment": 0.3116,
+  "push": 0.2315
+ },
+ "ratios": {
+  "open_pr": 1.005,
+  "open_issue": 1.035,
+  "issue_comment": 0.75,
+  "pr_review": 0.547,
+  "pr_review_comment": 0.578,
+  "push": 0.65
+ },
+ "snapshots": [
+  {
+   "cutoff": "2026-11-06 16:00:00",
+   "label_start": "2026-11-06 16:00:00",
+   "rows": 4108,
+   "pos_rate": {
+    "open_pr": 0.084,
+    "open_issue": 0.0455,
+    "issue_comment": 0.0497,
+    "pr_review": 0.0533,
+    "pr_review_comment": 0.0156,
+    "push": 0.0385
+   }
+  },
+  {
+   "cutoff": "2026-10-30 16:00:00",
+   "label_start": "2026-10-30 16:00:00",
+   "rows": 4040,
+   "pos_rate": {
+    "open_pr": 0.0881,
+    "open_issue": 0.0485,
+    "issue_comment": 0.0624,
+    "pr_review": 0.0658,
+    "pr_review_comment": 0.0265,
+    "push": 0.0653
+   }
+  }
+ ],
+ "inner_f1": {
+  "open_pr": 0.4374,
+  "open_issue": 0.4564,
+  "issue_comment": 0.4339,
+  "pr_review": 0.413,
+  "pr_review_comment": 0.3902,
+  "push": 0.3284
+ },
+ "valid": {
+  "per_act": {
+   "open_pr": 0.4441591784338896,
+   "open_issue": 0.4909560723514212,
+   "issue_comment": 0.418732782369146,
+   "pr_review": 0.3161290322580645,
+   "pr_review_comment": 0.29310344827586204,
+   "push": 0.24116424116424118
+  },
+  "macro_f1": 0.36737412580877077,
+  "micro_f1": 0.3842364532019704,
+  "score": 0.3758052895053706
+ },
+ "valid_without_push": {
+  "per_act": {
+   "open_pr": 0.4441591784338896,
+   "open_issue": 0.4909560723514212,
+   "issue_comment": 0.418732782369146,
+   "pr_review": 0.3161290322580645,
+   "pr_review_comment": 0.29310344827586204
+  },
+  "macro_f1": 0.39261610273767666,
+  "micro_f1": 0.4194373401534527,
+  "score": 0.4060267214455647
+ }
+}
