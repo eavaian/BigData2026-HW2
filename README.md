@@ -230,7 +230,7 @@ and the 3 weeks):
 | Segment | Share of positives | Copy last week | LightGBM | RDL |
 |---|---|---|---|---|
 | active < 1 day ago | 22% | 0.52 | 0.58 | 0.56 |
-| 1–7 days ago | 41% | 0.34 | 0.42 | 0.42 |
+| 1–7 days ago | 40% | 0.34 | 0.42 | 0.42 |
 | 7–28 days ago | 32% | 0 | 0.12 | 0.17 |
 | > 28 days ago | 3% | 0 | 0 | 0.05 |
 | no history (predicted 0) | 2% | 0 | 0 | 0 |
@@ -243,7 +243,7 @@ LightGBM, at lower precision (0.14 vs 0.22). F1 per activity (pooled over the 3 
 |---|---|---|---|
 | open_pr | 0.41 | 0.43 | 0.35 |
 | open_issue | 0.45 | 0.43 | 0.41 |
-| issue_comment | 0.41 | 0.41 | 0.37 |
+| issue_comment | 0.41 | 0.41 | 0.36 |
 | pr_review | 0.39 | 0.41 | 0.36 |
 | pr_review_comment | 0.30 | 0.28 | 0.25 |
 | push | 0.26 | 0.27 | 0.24 |
